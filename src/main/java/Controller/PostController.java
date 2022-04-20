@@ -7,17 +7,31 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class PostController {
 
-    @RequestMapping(path = "/post/create", method = RequestMethod.GET)
+    @GetMapping("post")
     @ResponseBody
     public String postBody(@RequestBody String fullName) {
 
-        return "View the form for creating a post ";
+        return "Index for posts page ";
     }
 
-    @RequestMapping(path = "/post/create", method = RequestMethod.POST)
+    @GetMapping("/posts/{id}")
     @ResponseBody
-    public String createPostView(){
+    public String PostView(@PathVariable long id){
 
-        return "view the form for creating a post";
+        return "Future page to show off id: " + id;
     }
+
+    @GetMapping("/posts/create")
+    @ResponseBody
+    public String postCreate(){
+
+        return "Form for creating a post ";
+    }
+
+    @PostMapping("/post/create")
+    @ResponseBody
+    public String submitPost(){
+        return "create a new post";
+    }
+
 }
