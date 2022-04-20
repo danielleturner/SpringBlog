@@ -1,15 +1,14 @@
-package Controller;
+package com.codeup.springblog.Controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 public class PostController {
 
-    @GetMapping("post")
+    @GetMapping("/post")
     @ResponseBody
-    public String postBody(@RequestBody String fullName) {
+    public String postBody() {
 
         return "Index for posts page ";
     }

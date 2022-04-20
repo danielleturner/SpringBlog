@@ -1,4 +1,4 @@
-package Controller;
+package com.codeup.springblog.Controller;
 
 
 import com.codeup.springblog.AdRepository;

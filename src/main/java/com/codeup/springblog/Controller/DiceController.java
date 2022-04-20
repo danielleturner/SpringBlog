@@ -1,4 +1,4 @@
-package Controller;
+package com.codeup.springblog.Controller;
 
 
 import org.springframework.stereotype.Controller;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class DiceController {
-    @RequestMapping(path = "/roll-dice", method = RequestMethod.GET)
     public static double getRandomRoll(double min, double max) {
         return (int) (Math.random() * ((max - min) + 1)) + min;
     }
