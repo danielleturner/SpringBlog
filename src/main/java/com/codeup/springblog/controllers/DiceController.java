@@ -1,4 +1,4 @@
-package com.codeup.springblog.Controller;
+package com.codeup.springblog.controllers;
 
 
 import org.springframework.stereotype.Controller;
@@ -36,6 +36,6 @@ public class DiceController {
         }
 
         model.addAttribute("message", "You guess the wrong number!");
-        return "roll-dice";
+        return "roll-dice"; // roll-dice goes to the roll-dice html
     }
 }
